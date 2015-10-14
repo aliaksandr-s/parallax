@@ -1,0 +1,212 @@
+// Base Styles
+
+body
+  font-family: 'Dosis', sans-serif
+
+h1
+  color: #ccc
+  font-weight: 300
+
+p
+  font-weight: 200
+figure
+  margin: auto
+
+.content
+  position: relative
+  z-index: 2
+  background: white
+  margin-bottom: 250px
+  overflow: hidden
+
+  article
+    padding: 100px 0
+    max-width: 640px
+    margin: 0 auto
+    text-align: center
+
+img
+  max-width: 100%
+
+
+
+// Parallax
+
+.bird-box
+  position: relative
+  height: 600px
+  background:
+    image: url(/images/bird-bg.jpg)
+    position: top center
+    attachment: fixed
+    size: auto 600px
+  overflow: hidden
+  z-index: 3
+
+.logo
+  height: 100px
+  width: 100%
+  background:
+    image: url(/images/black-bird-logo.svg)
+    position: center
+    repeat: no-repeat
+  position: absolute
+  top: 50%
+  margin-top: -50px
+
+.fore-bird
+  width: 960px
+  height: 733px
+  background:
+    // color: transparentize(pink, 0.4)
+    image: url(/images/fore-bird.png)
+    repeat: no-repeat
+    position: right bottom
+  position: absolute
+  left: 50%
+  margin-left: -480px
+  top: 380px
+
+.back-bird
+  width: 960px
+  height: 298px
+  background:
+    image: url(../images/back-bird.png)
+    repeat: no-repeat
+    position: top left
+  position: absolute
+  left: 50%
+  margin-left: -480px
+
+
+  //Model Grid
+
+.clothes-pics
+  margin-bottom: 100px
+
+  figure
+    margin-bottom: 18px
+    position: relative
+    opacity: 0
+    transform: translateX(30px)
+    transition: all 0.4s ease-in-out
+    overflow: hidden
+    cursor: pointer
+
+    &.is-showing
+      opacity: 1
+      transform: translateX(0px)
+
+    img
+      display: block
+      transform: scale(1)
+      transition: all 0.3s ease-in-out
+
+    &:hover
+      figcaption
+        left: 0%
+      img
+        transform: scale(1.1)
+
+    figcaption
+      position: absolute
+      bottom: 10px
+      left: -100%
+      background: black
+      color: white
+      padding: 2px 8px
+      font-size: 11px
+      transition: all 0.3s ease-in-out
+
+// large-window
+
+.large-window
+  height: 640px
+  background:
+    image: url(../images/model2.jpg)
+    position: center 0px
+    repeat: repeat-y
+    attachment: fixed
+  margin-top: 100px
+  margin-bottom: 100px
+  border-radius: 50%
+  position: relative
+
+  .window-tint
+    background-color: rgba(0,0,0,0.5)
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+
+  .promo-text
+    color: white
+    font-weight: 300
+    font-size: 50px
+
+    strong
+      display: block
+      font-size: 30px
+
+    span
+      font:
+        weight: 400
+        size: 20px
+        style: italic
+      color: rgba(255, 255, 255, 0.6)
+
+    .window-cta
+      color: white
+      font-size: 24px
+      text-decoration: none
+      font-weight: 400
+      padding: 6px 20px
+      border: 1px solid white
+      transition: all 0.3s ease-in-out
+
+      &:hover
+        cursor: pointer
+        background-color: white
+        color: black
+
+// posts
+
+.blog-posts
+  margin-top: 100px
+
+  .post
+    border: 1px solid #e1e1e1
+    padding: 20px 20px 0
+    background: white
+    position: relative
+
+  .post-1
+    transform: translate(100px, 20px)
+
+  .post-2
+    z-index: 2
+
+  .post-3
+    transform: translate(-100px, 20px)
+
+// footer
+
+footer
+  background: rgba(0, 0, 0, 0.95)
+  color: white
+  padding: 40px 0
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  .footer-stuff
+    max-width: 640px
+    margin: 0 auto
+
+  a
+    color: white
